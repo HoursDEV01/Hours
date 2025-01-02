@@ -1,0 +1,4 @@
+[ZoneTransfer]
+ZoneId=3
+ReferrerUrl=https://cloudconvert.com/
+HostUrl=https://us-east.storage.cloudconvert.com/tasks/e22ff700-3eb1-4976-8416-f9e9ff4c0882/bitcoin.ico?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=cloudconvert-production%2F20250101%2Fva%2Fs3%2Faws4_request&X-Amz-Date=20250101T051704Z&X-Amz-Expires=86400&X-Amz-Signature=09a33a4aa3c327b9f4136aab9835e420b9da2177611a2b049dbb07a39602e0fd&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3D%22bitcoin.ico%22&response-content-type=image%2Fvnd.microsoft.icon&x-id=GetObject
