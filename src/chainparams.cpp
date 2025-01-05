@@ -124,8 +124,8 @@ public:
         assert(genesis.hashMerkleRoot == uint256S("0x202abe8aaa5c63bef5d8afd495051fd98e44efbc24059fc03cd01a18be05f112"));
 
         // Note that of those with the service bits flag, most only support a subset of possible options
-        //vSeeds.emplace_back("seed-a.litecoin.loshan.co.uk", true);
-        
+        vSeeds.emplace_back("hour-n1.flightsystem.org", true);
+        vSeeds.emplace_back("hour-n2.flightsystem.org", true);
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,42);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,5);
