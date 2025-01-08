@@ -6,7 +6,7 @@ Hours Core integration/staging tree
 01/08/2024 Update:
 
 Nodes are being updated with new core changes and will be offline for a short period.  If you have a node running, please wait for the next update and clear your blockchain to prevent a fork.  We 
-will announce the offical launce here and other sources. 
+will announce the offical launce here and other sources. Questions can be sent to hours@flightsystems.org.
 
 What is Hours?
 ----------------
