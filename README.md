@@ -10,6 +10,8 @@ will announce the offical launch here and other sources. Questions can be sent t
 
 Expect blockchain wipes until further notice.
 
+Join us on Discord @ https://discord.gg/QZgRVm5YKa
+
 What is Hours?
 ----------------
 
