@@ -25,6 +25,8 @@ Connect:
 
 Block Explorer:  http://explore.flightsystem.org
 
+Twitter/X: http://x.com/Buildyourhours
+
 
 What is Hours?
 ----------------
