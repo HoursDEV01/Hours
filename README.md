@@ -10,10 +10,10 @@ will announce the offical launch here and other sources. Questions can be sent t
 
 Expect blockchain wipes until further notice.
 
-Join us on Discord @ https://discord.gg/QZgRVm5YKa
-NOMP Pool @ http://74.50.98.124:2500 - Web UI
-Connect:   74.50.98.124:3600 GPU
-           74.50.98.124:3700 ASIC
+Join us on Discord @ https://discord.gg/QZgRVm5YKa<bR>
+NOMP Pool @ http://74.50.98.124:2500 - Web UI<br>
+Connect:   74.50.98.124:3600 GPU<br>
+           74.50.98.124:3700 ASIC<br>
 
 Block Explorer:  http://explore.flightsystem.org:3001
 
