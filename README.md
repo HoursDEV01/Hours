@@ -3,19 +3,27 @@ Hours Core integration/staging tree
 
 
 
-01/08/2024 Update:
+01/18/2024 Update:
 
-Nodes are being updated with new core changes and will be offline for a short period.  If you have a node running, please wait for the next update and clear your blockchain to prevent a fork.  We 
-will announce the offical launch here and other sources. Questions can be sent to hours@flightsystems.org.
+Four nodes are up and availbe.<br>
+addnode=hours-n1.flightsystem.org<br>
+addnode=hours-n2.flightsystem.org<br>
+addnode=hours-n3.flightsystem.org<br>
+addnode=hours-n4.flightsystem.org<br>
 
-Expect blockchain wipes until further notice.
+Questions can be sent to hours@flightsystems.org.
+
+Mainnet is live and we are currently on block 22677.<br>
+
 
 Join us on Discord @ https://discord.gg/QZgRVm5YKa<bR>
-NOMP Pool @ http://74.50.98.124:2500 - Web UI<br>
-Connect:   74.50.98.124:3600 GPU<br>
-           74.50.98.124:3700 ASIC<br>
 
-Block Explorer:  http://explore.flightsystem.org:3001
+NOMP Pool @ http://74.50.98.124:2500 - Web UI<br>
+Connect:  
+ GPU:     74.50.98.124:3600      
+ ASIC:    74.50.98.124:3700   
+
+Block Explorer:  http://explore.flightsystem.org
 
 
 What is Hours?
