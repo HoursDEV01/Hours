@@ -1,9 +1,11 @@
 Hours Core integration/staging tree
 =====================================
 
+01/21/2025
+Please make sure you update as of 1/21 due to some params change.  The new windows wallet has been uploaded on here.
 
 
-01/18/2024 Update:
+01/18/2025 Update:
 
 Four nodes are up and availbe.<br>
 addnode=hours-n1.flightsystem.org<br>
