@@ -1532,9 +1532,100 @@ UniValue getchaintxstats(const JSONRPCRequest& request)
     return ret;
 }
 
+UniValue getactivationthresholdinfo(const JSONRPCRequest& request)
+{
+    // Check the number of arguments (should be none)
+    if (request.fHelp || !request.params.empty())
+        throw std::runtime_error(
+            "getactivationthresholdinfo\n"
+            "\nReturns the current activation thresholds and confirmation windows based on the current block height.\n"
+            "\nResult:\n"
+            "{\n"
+            "  \"nRuleChangeActivationThreshold\": xxxxx,   (numeric) The current rule change activation threshold\n"
+            "  \"nMinerConfirmationWindow\": xxxxx,        (numeric) The current miner confirmation window\n"
+            "}\n"
+            "\nExamples:\n"
+            + HelpExampleCli("getactivationthresholdinfo", "")
+        );
+
+    // Get the current block height
+    const CBlockIndex* pindexTip = chainActive.Tip();
+    if (!pindexTip) {
+        throw JSONRPCError(RPC_MISC_ERROR, "Chain tip not available");
+    }
+    int nHeight = pindexTip->nHeight;
+
+    // Get consensus parameters
+    const Consensus::Params& params = Params().GetConsensus();
+
+    // Determine current values
+    int currentThreshold = (nHeight >= params.V152ForkHeight) ? params.nRuleChangeActivationThresholdV2 : params.nRuleChangeActivationThreshold;
+    int currentWindow = (nHeight >= params.V152ForkHeight) ? params.nMinerConfirmationWindowV2 : params.nMinerConfirmationWindow;
+
+    // Create the result
+    UniValue result(UniValue::VOBJ);
+    result.pushKV("nRuleChangeActivationThreshold", currentThreshold);
+    result.pushKV("nMinerConfirmationWindow", currentWindow);
+
+    return result;
+}
+
+UniValue getdifficultyalgorithm(const JSONRPCRequest& request)
+{
+    if (request.fHelp || request.params.size() != 0)
+        throw std::runtime_error(
+            "getdifficultyalgorithm\n"
+            "Returns the current difficulty adjustment algorithm used to calculate the next block difficulty.\n"
+            "\nResult:\n"
+            "{\n"
+            "  \"current_algorithm\": \"xxxx\"   (string) The active difficulty algorithm\n"
+            "}\n"
+            "\nExamples:\n"
+            + HelpExampleCli("getdifficultyalgorithm", "")
+            + HelpExampleRpc("getdifficultyalgorithm", "")
+        );
+
+    LOCK(cs_main);
+
+    const CBlockIndex* pindexLast = chainActive.Tip();
+
+    if (!pindexLast) {
+        throw JSONRPCError(RPC_MISC_ERROR, "Chain tip not available");
+    }
+
+    int nHeight = pindexLast ? pindexLast->nHeight : 0;
+
+    const Consensus::Params& params = Params().GetConsensus();
+    unsigned int nextWorkRequired = GetNextWorkRequired(pindexLast, nullptr, params);
+    std::string algorithm;
+
+    if (pindexLast->nHeight >= params.V152ForkHeight) {
+        unsigned int lwmaWorkRequired = LwmaCalculateNextWorkRequired(pindexLast, params);
+        LogPrintf("getdifficultyalgorithm: lwmaWorkRequired = %u, nextWorkRequired = %u\n", lwmaWorkRequired, nextWorkRequired);
+        if (abs((int)nextWorkRequired - (int)lwmaWorkRequired) < 200) {
+            algorithm = "LWMA difficulty algorithm";
+        } else {
+            algorithm = "Unknown Algorithm - LWMA mismatch";
+        }
+    } else {
+        unsigned int legacyWorkRequired = CalculateNextWorkRequired(pindexLast, pindexLast->GetBlockTime(), params);
+        LogPrintf("getdifficultyalgorithm: legacyWorkRequired = %u, nextWorkRequired = %u\n", legacyWorkRequired, nextWorkRequired);
+        if (abs((int)nextWorkRequired - (int)legacyWorkRequired) < 200) {
+            algorithm = "CalculateNextWorkRequired";
+        } else {
+            algorithm = "Unknown Algorithm - Legacy mismatch";
+        }
+    }
+
+    UniValue result(UniValue::VOBJ);
+    result.pushKV("current_algorithm", algorithm);
+    return result;
+}
+
 static const CRPCCommand commands[] =
 { //  category              name                      actor (function)         okSafe argNames
   //  --------------------- ------------------------  -----------------------  ------ ----------
+    { "blockchain",         "getactivationthresholdinfo",      &getactivationthresholdinfo,      true,  {} },
     { "blockchain",         "getblockchaininfo",      &getblockchaininfo,      true,  {} },
     { "blockchain",         "getchaintxstats",        &getchaintxstats,        true,  {"nblocks", "blockhash"} },
     { "blockchain",         "getbestblockhash",       &getbestblockhash,       true,  {} },
@@ -1544,6 +1635,7 @@ static const CRPCCommand commands[] =
     { "blockchain",         "getblockheader",         &getblockheader,         true,  {"blockhash","verbose"} },
     { "blockchain",         "getchaintips",           &getchaintips,           true,  {} },
     { "blockchain",         "getdifficulty",          &getdifficulty,          true,  {} },
+    { "blockchain",         "getdifficultyalgorithm", &getdifficultyalgorithm, true,  {} },
     { "blockchain",         "getmempoolancestors",    &getmempoolancestors,    true,  {"txid","verbose"} },
     { "blockchain",         "getmempooldescendants",  &getmempooldescendants,  true,  {"txid","verbose"} },
     { "blockchain",         "getmempoolentry",        &getmempoolentry,        true,  {"txid"} },
