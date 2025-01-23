@@ -43,7 +43,7 @@ config file):
 
 	HiddenServiceDir /var/lib/tor/Hours-service/
 	HiddenServicePort 9024 127.0.0.1:9024
-	HiddenServicePort 19335 127.0.0.1:19335
+	HiddenServicePort 19024 127.0.0.1:19024
 
 The directory can be different of course, but (both) port numbers should be equal to
 your Hoursd's P2P listen port (9024 by default).
