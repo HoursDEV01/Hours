@@ -4,6 +4,7 @@
 
 #include "versionbits.h"
 #include "consensus/params.h"
+#include "util.h"
 
 const struct VBDeploymentInfo VersionBitsDeploymentInfo[Consensus::MAX_VERSION_BITS_DEPLOYMENTS] = {
     {
@@ -164,6 +165,11 @@ int AbstractThresholdConditionChecker::GetStateSinceHeightFor(const CBlockIndex*
     return pindexPrev->nHeight + 1;
 }
 
+static const CBlockIndex* GetActiveTip() {
+    extern CChain chainActive;
+    return chainActive.Tip();
+}
+
 namespace
 {
 /**
@@ -176,8 +182,46 @@ private:
 protected:
     int64_t BeginTime(const Consensus::Params& params) const override { return params.vDeployments[id].nStartTime; }
     int64_t EndTime(const Consensus::Params& params) const override { return params.vDeployments[id].nTimeout; }
-    int Period(const Consensus::Params& params) const override { return params.nMinerConfirmationWindow; }
-    int Threshold(const Consensus::Params& params) const override { return params.nRuleChangeActivationThreshold; }
+    //int Period(const Consensus::Params& params) const override { return params.nMinerConfirmationWindow; }
+    //int Threshold(const Consensus::Params& params) const override { return params.nRuleChangeActivationThreshold; }
+
+    int Period(const Consensus::Params& params) const override {
+        //return PeriodWithHeight(params, nullptr);
+        const CBlockIndex* pindex = GetActiveTip();
+        return PeriodWithHeight(params, pindex);
+    }
+
+    int Threshold(const Consensus::Params& params) const override {
+        //return ThresholdWithHeight(params, nullptr);
+        const CBlockIndex* pindex = GetActiveTip();
+        return ThresholdWithHeight(params, pindex);
+    }
+
+    int PeriodWithHeight(const Consensus::Params& params, const CBlockIndex* pindex) const {
+        if (!pindex) {
+            return params.nMinerConfirmationWindow;
+        }
+
+        if (pindex->nHeight < params.V152ForkHeight) {
+            return params.nMinerConfirmationWindow;
+        } else {
+            //LogPrintf("DEBUG: Using V2MinerConfirmationWindow at height %d\n", pindex->nHeight);
+            return params.nMinerConfirmationWindowV2;
+        }
+    }
+
+    int ThresholdWithHeight(const Consensus::Params& params, const CBlockIndex* pindex) const {
+        if (!pindex) {
+            return params.nRuleChangeActivationThreshold;
+        }
+
+        if (pindex->nHeight < params.V152ForkHeight) {
+            return params.nRuleChangeActivationThreshold;
+        } else {
+            //LogPrintf("DEBUG: Using V2RuleChangeActivationThreshold at height %d\n", pindex->nHeight);
+            return params.nRuleChangeActivationThresholdV2;
+        }
+    }
 
     bool Condition(const CBlockIndex* pindex, const Consensus::Params& params) const override
     {
