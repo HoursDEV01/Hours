@@ -20,10 +20,10 @@ Mainnet is live and we are currently on block 22677.<br>
 
 Join us on Discord @ https://discord.gg/QZgRVm5YKa<bR>
 
-NOMP Pool @ http://hourspool1.flightsystem.org - Web UI<br>
+NOMP Pool @ http://pool.flightsystem.org - Web UI<br>
 Connect:  
- GPU:     hourspool1.flightsystem.org:3600      
- ASIC:    hourspool1.flightsystem.org:3700   
+ GPU:     pool.flightsystem.org:3600      
+ ASIC:    pool.flightsystem.org:3700   
 
 Block Explorer:  http://explore.flightsystem.org
 
