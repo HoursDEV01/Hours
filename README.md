@@ -1,5 +1,7 @@
 Hours Core integration/staging tree
 =====================================
+02/15/2025
+Work continues on the new Windows wallet that utilizes the Hours daemon as well as a version for a customer facing duel monitor POS for accepting Hours.  
 
 01/21/2025
 Please make sure you update as of 1/21 due to some params change.  The new windows wallet has been uploaded on here.
