@@ -1,5 +1,11 @@
 Hours Core integration/staging tree
 =====================================
+03/01/2025
+Project domain updates about done to break Hours Coin off from the Flight Systems network.  
+Stand alone POS work continues.
+Whitepaper updated and will be posted with new domain.
+Listed on one exchange, applications to others continue.
+
 02/15/2025
 Work continues on the new Windows wallet that utilizes the Hours daemon as well as a version for a customer facing duel monitor POS for accepting Hours.  
 
