@@ -1,5 +1,8 @@
 Hours Core integration/staging tree
 =====================================
+06/06/2025
+Approaching 1 million coins mined.  Work continues on Windows and Mobile apps.
+
 03/01/2025
 Project domain updates about done to break Hours Coin off from the Flight Systems network.  
 Stand alone POS work continues.
