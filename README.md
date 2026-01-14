@@ -1,7 +1,10 @@
 Hours Core integration/staging tree
 =====================================
+01/2026
+The Android app is nearing a beta and work will continue on to iOS after.  We have passed 2 million Hours mined so far!  
+
 06/06/2025
-Approaching 1 million coins mined.  Work continues on Windows and Mobile apps.
+Approaching 1 million coins mined. 
 
 03/01/2025
 Project domain updates about done to break Hours Coin off from the Flight Systems network.  
