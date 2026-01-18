@@ -1,5 +1,8 @@
 Hours Core integration/staging tree
 =====================================
+01/2026 Update
+Hours port for BITCOINJ is nearing completion allowing for others to use in their Java/Android projects.
+
 01/2026
 The Android app is nearing a beta and work will continue on to iOS after.  We have passed 2 million Hours mined so far!  
 
