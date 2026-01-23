@@ -28,10 +28,9 @@ Please make sure you update as of 1/21 due to some params change.  The new windo
 01/18/2025 Update:
 
 Four nodes are up and availbe.<br>
-addnode=hours-n1.flightsystem.org<br>
-addnode=hours-n2.flightsystem.org<br>
-addnode=hours-n3.flightsystem.org<br>
-addnode=hours-n4.flightsystem.org<br>
+addnode=hour-n1.flightsystem.org<br>
+addnode=hour-n2.flightsystem.org<br>
+
 
 Questions can be sent to hours@flightsystems.org.
 
