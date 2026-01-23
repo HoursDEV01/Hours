@@ -1,5 +1,8 @@
 Hours Core integration/staging tree
 =====================================
+01/23/2026
+Work has started on converting to the 0.21.4 codebase.  MWEB will not be included on this version but can be looked at in furture updates. Testing will be performed on additional nodes but mining cannot occur on them until an official release date and nodes are updated.  
+
 01/2026 Update
 Hours port for BITCOINJ is nearing completion allowing for others to use in their Java/Android projects.
 
