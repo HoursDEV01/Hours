@@ -1,5 +1,10 @@
 Hours Core integration/staging tree
 =====================================
+While working on the new updates, some opportunities have come up and wanted to see what everyone's opinion is before rolling some changes out.  The major goal of this project is to help aid, or at least marginally disrupt the constant raising cost of training our future commercial pilots.  We aim to keep a steadily funded scholarship address and award flight training scholarships to dedicated students in need.  We have built a great starting balance over the last year by mining directly to the scholarship fund and plan on keeping it up!  As an additional option, we are purposing a change to the award system.  We are currently awarding 10 coins per block plus transaction fees.  We are purposing changing the reward to 16 coins and doing a split award of 15 + fees to the miners and 1 to the scholarship fund.  The second change we are considering is changing the cap.  Currently we are set to halve each 840,000 blocks until the award reaches too small to round.  The new rules would kept the halving at 840k but once the halving award reaches sub 2 coins, it would level out at 2 indefinitely and do a 1 + fees to miners and 1 to scholarship fund.  Please feel free join the discord below and share your thoughts as well as keep up on the ongoing work.
+
+https://discord.gg/2JjQ27qPju
+
+
 01/23/2026
 Work has started on converting to the 0.21.4 codebase.  MWEB will not be included on this version but can be looked at in furture updates. Testing will be performed on additional nodes but mining cannot occur on them until an official release date and nodes are updated.  
 
