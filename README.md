@@ -32,7 +32,7 @@ Please make sure you update as of 1/21 due to some params change.  The new windo
 
 01/18/2025 Update:
 
-Four nodes are up and availbe.<br>
+Nodes are up and available.<br>
 addnode=hour-n1.flightsystem.org<br>
 addnode=hour-n2.flightsystem.org<br>
 
