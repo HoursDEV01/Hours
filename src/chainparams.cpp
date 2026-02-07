@@ -87,12 +87,12 @@ public:
         consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].nStartTime = Consensus::BIP9Deployment::NEVER_ACTIVE;
         consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].nTimeout = Consensus::BIP9Deployment::NO_TIMEOUT;
 
-        // Deployment of Taproot (BIPs 340-342)
+        // Deployment of Taproot (BIPs 340-342) Delayed until block 300k
         consensus.vDeployments[Consensus::DEPLOYMENT_TAPROOT].bit = 2;
         consensus.vDeployments[Consensus::DEPLOYMENT_TAPROOT].nStartHeight = 290000; 
         consensus.vDeployments[Consensus::DEPLOYMENT_TAPROOT].nTimeoutHeight = 300000; 
 
-        // Deployment of MWEB (LIP-0002, LIP-0003, and LIP-0004) //Delayed until block 
+        // Deployment of MWEB (LIP-0002, LIP-0003, and LIP-0004) //Delayed until block 2.8 Million
         consensus.vDeployments[Consensus::DEPLOYMENT_MWEB].bit = 4;
         consensus.vDeployments[Consensus::DEPLOYMENT_MWEB].nStartHeight = 2700000; 
         consensus.vDeployments[Consensus::DEPLOYMENT_MWEB].nTimeoutHeight = 2800000; 
