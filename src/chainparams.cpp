@@ -135,7 +135,7 @@ public:
         base58Prefixes[EXT_SECRET_KEY] = { 0x03, 0x28, 0xAE, 0xE4 };
 
         bech32_hrp = "hours";
-        //mweb_hrp = "ltcmweb";
+        mweb_hrp = "hrsmweb";
 
         vFixedSeeds = std::vector<uint8_t>(std::begin(chainparams_seed_main), std::end(chainparams_seed_main));
 
@@ -222,7 +222,7 @@ public:
         vFixedSeeds.clear();
         vSeeds.clear();
         // nodes with support for servicebits filtering should be at the top
-        //vSeeds.emplace_back("testnet-seed.hourstools.com");
+        vSeeds.emplace_back("testnode.flightsystem.org");
         
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,111);
@@ -233,7 +233,7 @@ public:
         base58Prefixes[EXT_SECRET_KEY] = {0x04, 0x35, 0x83, 0x94};
 
         bech32_hrp = "thours";
-        //mweb_hrp = "tmweb";
+        mweb_hrp = "tmweb";
 
         vFixedSeeds = std::vector<uint8_t>(std::begin(chainparams_seed_test), std::end(chainparams_seed_test));
 
