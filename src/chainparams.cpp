@@ -114,7 +114,7 @@ public:
         m_assumed_blockchain_size = 40;
         m_assumed_chain_state_size = 2;
 
-        genesis = CreateGenesisBlock((1735612596, 2006126818, 0x1e0ffff0, 1, 50 * COIN);
+        genesis = CreateGenesisBlock(1735612596, 2006126818, 0x1e0ffff0, 1, 50 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
         assert(consensus.hashGenesisBlock == uint256S("0x7e718b4eacbb5c606a463f3f69164296df0255e280e751a7652e14fae57eb098"));
         assert(genesis.hashMerkleRoot == uint256S("0x202abe8aaa5c63bef5d8afd495051fd98e44efbc24059fc03cd01a18be05f112"));
@@ -222,7 +222,7 @@ public:
         vFixedSeeds.clear();
         vSeeds.clear();
         // nodes with support for servicebits filtering should be at the top
-        vSeeds.emplace_back("testnode.flightsystem.org");
+        //vSeeds.emplace_back("testnode.flightsystem.org");
         
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,111);
@@ -235,7 +235,7 @@ public:
         bech32_hrp = "thours";
         mweb_hrp = "tmweb";
 
-        vFixedSeeds = std::vector<uint8_t>(std::begin(chainparams_seed_test), std::end(chainparams_seed_test));
+        //vFixedSeeds = std::vector<uint8_t>(std::begin(chainparams_seed_test), std::end(chainparams_seed_test));
 
         fDefaultConsistencyChecks = false;
         fRequireStandard = false;
