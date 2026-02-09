@@ -1614,8 +1614,8 @@ bool static ProcessMessage(CNode* pfrom, const std::string& strCommand, CDataStr
 	if (pindexLast && pindexLast->nHeight >= params.V152ForkHeight) {
 	    std::string localSubVer = strSubVersion;
 	    if (pfrom->cleanSubVer != localSubVer) {
-    		LogPrintf("DEBUG: Peer %d has unsupported SubVer '%s'; disconnecting.\n", pfrom->GetId(), pfrom->cleanSubVer);
-    		pfrom->fDisconnect = true;
+    		LogPrintf("DEBUG: Peer %d has unsupported SubVer '%s'; recommend upgrade.\n", pfrom->GetId(), pfrom->cleanSubVer);
+    		// pfrom->fDisconnect = true; //disable the disconnect
     		return false;
 	    }
         }
