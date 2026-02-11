@@ -68,6 +68,7 @@ public:
         consensus.signet_challenge.clear();
         consensus.nSubsidyHalvingInterval = 840000;
         consensus.V152ForkHeight = 30200;
+        consensus.V214Subsidy = 240000;
         consensus.BIP16Height = 0; 
         consensus.BIP34Height = consensus.V152ForkHeight; //v152ForkHeight from 0.15.2
         consensus.BIP34Hash = uint256S("0x01c12a924a4f22bb12860f6bc7df4c8900872a12e5c3be86c179bfc8f6d74f28"); //30200
@@ -83,6 +84,8 @@ public:
         consensus.fPowNoRetargeting = false;
         consensus.nRuleChangeActivationThreshold = 1512; 
         consensus.nMinerConfirmationWindow = 2016; // nPowTargetTimespan / nPowTargetSpacing * 4
+        consensus.nRuleChangeActivationThresholdV2 = 540;
+        consensus.nMinerConfirmationWindowV2 = 720;
         consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].bit = 28;
         consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].nStartTime = Consensus::BIP9Deployment::NEVER_ACTIVE;
         consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].nTimeout = Consensus::BIP9Deployment::NO_TIMEOUT;
