@@ -68,7 +68,9 @@ struct Params {
     /** Block height at which CSV (BIP68, BIP112 and BIP113) becomes active */
     int CSVHeight;
     //V152 fork height
-    int64_t V152ForkHeight; 
+    int64_t V152ForkHeight;
+    //V214 Height for change in subsidy
+    int64_t V214Subsidy;
     /** Block height at which Segwit (BIP141, BIP143 and BIP147) becomes active.
      * Note that segwit v0 script rules are enforced on all blocks except the
      * BIP 16 exception blocks. */
@@ -90,6 +92,8 @@ struct Params {
     bool fPowNoRetargeting;
     int64_t nPowTargetSpacing;
     int64_t nPowTargetTimespan;
+    uint32_t nRuleChangeActivationThresholdV2;
+    uint32_t nMinerConfirmationWindowV2;
     int64_t DifficultyAdjustmentInterval() const { return nPowTargetTimespan / nPowTargetSpacing; }
     /** The best chain should have at least this much work */
     uint256 nMinimumChainWork;
