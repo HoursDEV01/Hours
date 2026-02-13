@@ -90,10 +90,10 @@ public:
         consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].nStartTime = Consensus::BIP9Deployment::NEVER_ACTIVE;
         consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].nTimeout = Consensus::BIP9Deployment::NO_TIMEOUT;
 
-        // Deployment of Taproot (BIPs 340-342) Delayed until block 300k
+        // Deployment of Taproot (BIPs 340-342) Delayed until block 400k
         consensus.vDeployments[Consensus::DEPLOYMENT_TAPROOT].bit = 2;
-        consensus.vDeployments[Consensus::DEPLOYMENT_TAPROOT].nStartHeight = 290000; 
-        consensus.vDeployments[Consensus::DEPLOYMENT_TAPROOT].nTimeoutHeight = 300000; 
+        consensus.vDeployments[Consensus::DEPLOYMENT_TAPROOT].nStartHeight = 390000; 
+        consensus.vDeployments[Consensus::DEPLOYMENT_TAPROOT].nTimeoutHeight = 400000; 
 
         // Deployment of MWEB (LIP-0002, LIP-0003, and LIP-0004) //Delayed until block 2.8 Million
         consensus.vDeployments[Consensus::DEPLOYMENT_MWEB].bit = 4;
@@ -127,9 +127,10 @@ public:
         // This is fine at runtime as we'll fall back to using them as an addrfetch if they don't support the
         // service bits we want, but we should get them updated to support all service bits wanted by any
         // release ASAP to avoid it where possible.
-        vSeeds.emplace_back("hour-n1.flightsystem.org", true);
-        vSeeds.emplace_back("hour-n2.flightsystem.org", true);
-
+        vSeeds.emplace_back("node1.hourscoin.org", true);
+        vSeeds.emplace_back("node2.hourscoin.org", true);
+        vSeeds.emplace_back("node3.hourscoin.org", true);
+        
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 42);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 5);
         base58Prefixes[SCRIPT_ADDRESS2] = std::vector<unsigned char>(1, 50);
