@@ -43,7 +43,7 @@ static const int TOOLTIP_WRAP_THRESHOLD = 80;
 #define SPINNER_FRAMES 36
 
 #define QAPP_ORG_NAME "Hours"
-#define QAPP_ORG_DOMAIN "hours.org"
+#define QAPP_ORG_DOMAIN "Hourscoin.org"
 #define QAPP_APP_NAME_DEFAULT "Hours-Qt"
 #define QAPP_APP_NAME_TESTNET "Liteocin-Qt-testnet"
 #define QAPP_APP_NAME_SIGNET "Hours-Qt-signet"
