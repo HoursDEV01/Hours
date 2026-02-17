@@ -247,7 +247,7 @@
 #define LT_OBJDIR ".libs/"
 
 /* Define to the address where bug reports for this package should be sent. */
-#define PACKAGE_BUGREPORT "https://github.com/hours-project/hours/issues"
+#define PACKAGE_BUGREPORT "https://github.com/HoursDEV01/Hours/issues"
 
 /* Define to the full name of this package. */
 #define PACKAGE_NAME "Hours Core"
@@ -259,7 +259,7 @@
 #define PACKAGE_TARNAME "hours"
 
 /* Define to the home page for this package. */
-#define PACKAGE_URL "https://hours.org/"
+#define PACKAGE_URL "https://hourscoin.org/"
 
 /* Define to the version of this package. */
 #define PACKAGE_VERSION "0.21.3"
