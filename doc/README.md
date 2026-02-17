@@ -5,7 +5,7 @@ Setup
 ---------------------
 Hours Core is the original Hours client and it builds the backbone of the network. It downloads and, by default, stores the entire history of Hours transactions, which requires approximately 22 gigabytes of disk space. Depending on the speed of your computer and network connection, the synchronization process can take anywhere from a few hours to a day or more.
 
-To download Hours Core, visit [hours.org](https://hours.org/).
+To download Hours Core, visit [hours.org](https://hourscoin.org/).
 
 Running
 ---------------------
