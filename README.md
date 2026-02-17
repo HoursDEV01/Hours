@@ -1,6 +1,6 @@
 <b>Hours Core integration/staging tree</b>
 
-Version 0.21.4 is in testing and should not be used at this time until further notice. 
+Version 0.21.4 is now the latest default code base.  It will connect to all official nodes but mining should be limited to the 0.15.2 version until the official rollout and after the official nodes have updated.  
 
 https://discord.gg/2JjQ27qPju
 
