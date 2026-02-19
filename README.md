@@ -1,4 +1,7 @@
-<b>Hours Core integration/staging tree</b>
+<b>Hours Core Version 0.21.4</b>
+
+The developer nodes are sheduled to be updated to 0.21.4 on 2/21 @ midnight.  One node will be left running on 0.15.2 to allow those still on v15 to sync for a brief time period.  All mining nodes need to be updated on Friday night/Saturday morning to avoid a possible fork.  
+
 
 Version 0.21.4 is now the latest default code base.  It will connect to all official nodes but mining should be limited to the 0.15.2 version until the official rollout and after the official nodes have updated.  
 
