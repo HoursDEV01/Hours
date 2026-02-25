@@ -97,8 +97,8 @@ public:
 
         // Deployment of MWEB (LIP-0002, LIP-0003, and LIP-0004) //Delayed until block 2.8 Million
         consensus.vDeployments[Consensus::DEPLOYMENT_MWEB].bit = 4;
-        consensus.vDeployments[Consensus::DEPLOYMENT_MWEB].nStartHeight = 2700000; 
-        consensus.vDeployments[Consensus::DEPLOYMENT_MWEB].nTimeoutHeight = 2800000; 
+        consensus.vDeployments[Consensus::DEPLOYMENT_MWEB].nStartHeight = std::numeric_limits<int>::max();
+        consensus.vDeployments[Consensus::DEPLOYMENT_MWEB].nTimeoutHeight = std::numeric_limits<int>::max(); 
 
         consensus.nMinimumChainWork = uint256S("0x000000000000000000000000000000000000000000000000001d68d3e829673b");
         consensus.defaultAssumeValid = uint256S("0xa661836395ac2f04f373ce705312aa92526ae4fd0d3eace84e908ff9f2dfabe7"); //30846
