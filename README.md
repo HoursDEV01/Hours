@@ -1,5 +1,7 @@
 <b>Hours Core Version 0.21.4</b>
 
+03/04/26 All nodes have been updated to 0.21.4.  Due to some mixed needs with MWEB on mining, the it will be removed/commented out of RPC and related calls coming on another minor update soon.  This will mainly affect mining pools or solo miners and will not be required right away.  For those that do not upgrade, you need to include the "mweb" rule in the getblocktemplate function on your mining pool.  After the update, that need will be removed.  
+
 The developer nodes are sheduled to be updated to 0.21.4 on 2/21 @ midnight.  One node will be left running on 0.15.2 to allow those still on v15 to sync for a brief time period.  All mining nodes need to be updated on Friday night/Saturday morning to avoid a possible fork.  
 
 
